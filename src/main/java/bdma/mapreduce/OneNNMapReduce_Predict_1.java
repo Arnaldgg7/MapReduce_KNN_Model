@@ -33,7 +33,7 @@ public class OneNNMapReduce_Predict_1 extends JobMapReduce {
 
 			// Perform the cartesian product to get all possible combinations, but taking into
 			// account that the Test rows are less in the overall dataset, so they must be used
-			// in the 'if-clause' that we are not replicating 'N' times in order to minimize the
+			// in the 'if-clause' that we are replicating 'N' times in order to minimize the
 			// communication overhead over the cluster:
 			if (rowType.equals(train)) {
 				int newKey = (int)(Math.random()*N);
